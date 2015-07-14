@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: OSGiTest
+Bundle-SymbolicName: hu.prenex.osgi.test
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: hu.prenex.osgi.test.Activator
+Bundle-Vendor: Prenex
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Service-Component: OSGI-INF/hu.prenex.osgi.test.TestComponent.xml
+Import-Package: org.osgi.framework;version="1.3.0",
+ org.osgi.service.component.annotations
+Bundle-ActivationPolicy: lazy
