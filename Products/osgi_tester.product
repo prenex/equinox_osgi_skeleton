@@ -16,6 +16,10 @@
  -Dfelix.fileinstall.noInitialDelay=true
  -Dlogback.configurationFile=./configuration/logback.xml
  -Dorg.eclipse.gemini.refreshBundles=FALSE
+ -Dosgi.framework.extensions=org.eclipse.equinox.weaving.hook
+ -Daj.weaving.verbose=true
+ -Dorg.aspectj.weaver.showWeaveInfo=true
+ -Dorg.aspectj.osgi.verbose=true
  -Xmx512m
       </vmArgs>
       <vmArgsMac>-XstartOnFirstThread -Dorg.eclipse.swt.internal.carbon.smallFonts
@@ -34,22 +38,31 @@
    </vm>
 
    <plugins>
+      <plugin id="hu.prenex.osgi.example.aop"/>
+      <plugin id="hu.prenex.osgi.example.aop.interfacing"/>
       <plugin id="hu.prenex.osgi.test"/>
       <plugin id="org.apache.felix.gogo.command"/>
       <plugin id="org.apache.felix.gogo.runtime"/>
       <plugin id="org.apache.felix.gogo.shell"/>
+      <plugin id="org.aspectj.runtime"/>
+      <plugin id="org.aspectj.weaver"/>
       <plugin id="org.eclipse.equinox.common"/>
       <plugin id="org.eclipse.equinox.console"/>
       <plugin id="org.eclipse.equinox.ds"/>
       <plugin id="org.eclipse.equinox.util"/>
+      <plugin id="org.eclipse.equinox.weaving.aspectj"/>
+      <plugin id="org.eclipse.equinox.weaving.caching"/>
+      <plugin id="org.eclipse.equinox.weaving.hook" fragment="true"/>
       <plugin id="org.eclipse.osgi"/>
       <plugin id="org.eclipse.osgi.services"/>
    </plugins>
 
    <configurations>
+      <plugin id="hu.prenex.osgi.example.aop" autoStart="false" startLevel="0" />
       <plugin id="hu.prenex.osgi.test" autoStart="true" startLevel="0" />
       <plugin id="org.eclipse.equinox.common" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.equinox.ds" autoStart="true" startLevel="2" />
+      <plugin id="org.eclipse.equinox.weaving.aspectj" autoStart="true" startLevel="3" />
       <plugin id="org.eclipse.osgi" autoStart="true" startLevel="1" />
       <plugin id="org.eclipse.osgi.services" autoStart="true" startLevel="1" />
    </configurations>

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<site>
+   <description>
+      This update site provides the AspectJ feature and related
+ tools.
+   </description>
+   <feature url="features/org.eclipse.ajdt_2.2.4.e44x-20150610-1600.jar" id="org.eclipse.ajdt" version="2.2.4.e44x-20150610-1600">
+      <category name="org.eclipse.ajdt"/>
+   </feature>
+   <feature url="features/org.eclipse.contribution.weaving_2.2.4.e44x-20150610-1600.jar" id="org.eclipse.contribution.weaving" version="2.2.4.e44x-20150610-1600">
+      <category name="org.eclipse.ajdt.other"/>
+   </feature>
+   <feature url="features/org.eclipse.contribution.xref_2.2.4.e44x-20150610-1600.jar" id="org.eclipse.contribution.xref" version="2.2.4.e44x-20150610-1600">
+      <category name="org.eclipse.ajdt.other"/>
+   </feature>
+   <feature url="features/org.eclipse.ajdt.source_2.2.4.e44x-20150610-1600.jar" id="org.eclipse.ajdt.source" version="2.2.4.e44x-20150610-1600">
+      <category name="org.eclipse.ajdt.source"/>
+   </feature>
+   <feature url="features/org.eclipse.contribution.weaving.source_2.2.4.e44x-20150610-1600.jar" id="org.eclipse.contribution.weaving.source" version="2.2.4.e44x-20150610-1600">
+      <category name="org.eclipse.ajdt.source"/>
+   </feature>
+   <feature url="features/org.eclipse.contribution.xref.source_2.2.4.e44x-20150610-1600.jar" id="org.eclipse.contribution.xref.source" version="2.2.4.e44x-20150610-1600">
+      <category name="org.eclipse.ajdt.source"/>
+   </feature>
+   <feature url="features/org.eclipse.equinox.weaving.sdk_1.1.0.weaving-hook-20140821.jar" id="org.eclipse.equinox.weaving.sdk" version="1.1.0.weaving-hook-20140821">
+      <category name="org.eclipse.ajdt.other"/>
+   </feature>
+   <feature url="features/org.aspectj_1.8.6.20150608154244.jar" id="org.aspectj" version="1.8.6.20150608154244">
+      <category name="org.eclipse.ajdt.other"/>
+   </feature>
+   <feature url="features/org.aspectj.source_1.8.6.20150608154244.jar" id="org.aspectj.source" version="1.8.6.20150608154244">
+      <category name="org.eclipse.ajdt.source"/>
+   </feature>
+   <category-def name="org.eclipse.ajdt" label="AspectJ Development Tools (Required)">
+      <description>
+         The AJDT project provides Eclipse tooling for the AspectJ language.  See http://eclipse.org/ajdt
+      </description>
+   </category-def>
+   <category-def name="org.eclipse.ajdt.other" label="Other AJDT Tools (Optional)">
+      <description>
+         Parts of AJDT that some may want to consume independently.
+      </description>
+   </category-def>
+   <category-def name="org.eclipse.ajdt.source" label="AspectJ Development Tools Source (Optional)">
+      <description>
+         Source code for all AJDT and related tools.
+      </description>
+   </category-def>
+</site>

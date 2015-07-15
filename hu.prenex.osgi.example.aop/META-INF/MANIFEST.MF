@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: ExampleAspect
+Bundle-SymbolicName: hu.prenex.osgi.example.aop
+Bundle-Version: 1.0.0.qualifier
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Require-Bundle: org.aspectj.runtime;visibility:=reexport
+Import-Package: hu.prenex.osgi.example.aop.interfacing
+Export-Package: hu.prenex.osgi.example.aop,
+ hu.prenex.osgi.example.aop.aspects;aspects="AnnotatedMethodLoggerAspect"
